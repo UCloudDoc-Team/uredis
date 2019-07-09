@@ -1,0 +1,16 @@
+# 云内存 Redis
+
+{{indexmenu_n>50}}
+
+云内存Redis是兼容开源 Redis 协议的 Key-Value
+类型在线存储服务。它支持字符串（String）、链表（List）、集合（Set）、有序集合（SortedSet）、哈希表（Hash）等多种数据类型，及事务（Transactions）、消息订阅与发布（Pub/Sub）等高级功能，云内存
+Redis在提供高速数据读写能力的同时满足数据持久化需求。
+
+UCloud云内存Redis提供主备版Redis和分布式版Redis两种架构，基于高可靠双机热备架构及可平滑扩展的集群架构，满足高读写性能场景及弹性扩缩容的业务需求。
+
+Redis凭借其丰富的数据结构和功能、单核的优秀性能以及完善的软件生态，近几年来逐渐成为互联网应用中内存存储的主流解决方案。针对原生Redis
+Cluster对于Client要求高、扩容不便的痛点，UCloud的分布式Redis产品自研了基于代理实现的分布式产品，并深耕产品多年，在更高性能、更大容量、数据安全等方面追求极致，不断为客户提供极致的分布式缓存服务。
+
+**目录**
+
+{{indexmenu>:database:uredis#1 | nsort dsort msort}}
