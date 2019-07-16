@@ -9,7 +9,8 @@ Redis 提供了 list、hash、zset 等复杂类型的数据结构，业务在使
 
 ## 操作步骤
 
-1、创建以下扫描脚本\`scan\_big\_key.py\`
+1、创建以下扫描脚本
+`scan_big_key.py`
 
 ``` python
 
