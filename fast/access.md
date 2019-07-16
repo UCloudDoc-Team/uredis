@@ -1,10 +1,10 @@
-\# 访问实例
+# 访问实例
 
 {{indexmenu_n>2}}
 
 出于安全性考虑，云内存Redis实例仅能在内网进行访问，以下以Redis协议为例简述如何访问云内存存储。
 
-\#\# telnet访问
+## telnet访问
 
 ```
 [test@u205 ~]$ telnet 127.0.0.1 6379
@@ -20,7 +20,7 @@ del key
 :1
 ```
 
-\#\# php访问
+## php访问
 
 ``` php
 <?php
@@ -34,7 +34,7 @@ del key
 ?>
 ```
 
-\#\# Python访问
+## Python访问
 
 ``` python
 #!/usr/bin/env python2
