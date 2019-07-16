@@ -161,20 +161,20 @@ no-enviction：禁止淘汰数据。
 
 ## 主备版Redis短连接并发性能怎么样呢？ 
 
-使用工具redis\_benchmark进行压测，主备版Redis对于短连接的并发性能为1W
+使用工具redis_benchmark进行压测，主备版Redis对于短连接的并发性能为1W
 QPS左右； 如果用户业务服务的短连接请求非常高，建议使用单机版Memcache
 
 ## Redis是怎么计算使用量，使用率的？
 
 主备Redis：
 
-使用量：info命令中返回的used\\\_memory（数据大小）和used\\\_memory\\\_rss（占用物理内存大小，即向OS申请了多少内存使用，实际使用中可能存在内存碎片）信息取max，即为使用量。
+使用量：info命令中返回的used_memory（数据大小）和used_memory_rss（占用物理内存大小，即向OS申请了多少内存使用，实际使用中可能存在内存碎片）信息取max，即为使用量。
 
 使用率：使用量/购买容量\*100%
 
 分布式Redis：
 
-分布式Redis暂时只根据used\\\_memory计算使用量和使用率
+分布式Redis暂时只根据used_memory计算使用量和使用率
 
 ## 主备Redis重启，有什么需要注意？
 
