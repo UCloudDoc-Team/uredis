@@ -1,13 +1,13 @@
-\# 主备Redis搜索大key
+# 主备Redis搜索大key
 
 {{indexmenu_n>1}}
 
-\#\# 背景信息
+## 背景信息
 
 Redis 提供了 list、hash、zset 等复杂类型的数据结构，业务在使用的时候可能由于 key 设计不合理导致某个 key
 过大，因此我们需要搜索工具来发现过大的key。
 
-\#\# 操作步骤
+## 操作步骤
 
 1、创建以下扫描脚本\`scan\_big\_key.py\`
 
@@ -162,4 +162,4 @@ if __name__=='__main__':
 
 2、执行脚本
 
-\`./scan\_big\_key.py sourceIP sourcePort \[password\]\`
+`./scan_big_key.py sourceIP sourcePort [password]`
