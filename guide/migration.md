@@ -97,6 +97,6 @@ redis-cli -h dest_ip -p dest_port -A PASSWORD --pipe < appendonly.aof
 
 ## 同步数据到URedis
 
-很多场景，需要把云主机中自建的Redis，或者其它机房的Redis，同步导入到URedis中；下载如下工具即可实现：<http:%%//%%tools.ufile.ucloud.cn/import\_data\_online.zip>
+很多场景，需要把云主机中自建的Redis，或者其它机房的Redis，同步导入到URedis中；下载如下工具即可实现：<http://tools.ufile.ucloud.cn/import_data_online.zip>
 
 在一台可以连接源端IP，目的端URedis IP的主机上，运行该工具；即可实现源端Redis，目的端URedis同步。
