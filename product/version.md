@@ -22,11 +22,20 @@ Redis 4.0的Lazyfree机制，延迟删除大key，降低删除操作对系统资
 
 在Redis
 4.0之前，redis执行del命令，只有在释放掉key的所有内存以后才会返回OK。如果key比较大（比如说一个hash里有1000万条数据），其他连接需要等待较长时间。为了兼容已有的del语义，Redis
-4.0引入unlink命令，效果以及用法和del完全一样，但内存释放动作放到后台线程中执行。 \`\`\` UNLINK key \[key
-...\] \`\`\` **flushdb/flushall**
+4.0引入unlink命令，效果以及用法和del完全一样，但内存释放动作放到后台线程中执行。 
+``` 
+UNLINK key [key...]
+``` 
 
-flushdb/flushall在 Redis 4.0中引入了新选项，可以指定是否使用Lazyfree的方式来清空整个内存。 \`\`\`
-FLUSHALL \[ASYNC\] FLUSHDB \[ASYNC\] \`\`\` **rename**
+**flushdb/flushall**
+
+flushdb/flushall在 Redis 4.0中引入了新选项，可以指定是否使用Lazyfree的方式来清空整个内存。 
+```
+FLUSHALL [ASYNC] 
+FLUSHDB [ASYNC] 
+``` 
+
+**rename**
 
 执行rename oldkey
 newkey时，如果newkey已经存在，redis会先删除已经存在的newkey，这也会引发上面提到的删除大key问题。
