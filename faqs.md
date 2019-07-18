@@ -149,7 +149,7 @@ no-enviction：禁止淘汰数据。
 
 ## 主备Redis为什么删除了大量key ，使用内存没有明显下降？
 
-主备redis内存使用量是根据redis的info命令中返回的used_memory（数据大小）和used_memory_rss（占用物理内存大小）信息取max；很多情况下，即使删除了大量Key，used_memory_rss也不会有明显下降，但是used_memory会相应下降的，这是redis内存管理策略造成的现象；used_memory_rss与used_memory的差值，相当于一个buffer，可以继续使用；
+主备redis内存使用量是根据redis的info命令中返回的used\_memory（数据大小）和used\_memory_rss（占用物理内存大小）信息取max；很多情况下，即使删除了大量Key，used\_memory\_rss也不会有明显下降，但是used\_memory会相应下降的，这是redis内存管理策略造成的现象；used\_memory\_rss与used_memory的差值，相当于一个buffer，可以继续使用；
 如果想要完全释放内存，可以通过清空数据，重启Redis，迁移Redis，来实现。
 
 ## Redis扩容是否影响在线服务？
@@ -168,7 +168,7 @@ QPS左右； 如果用户业务服务的短连接请求非常高，建议使用�
 
 主备Redis：
 
-使用量：info命令中返回的used_memory（数据大小）和used_memory_rss（占用物理内存大小，即向OS申请了多少内存使用，实际使用中可能存在内存碎片）信息取max，即为使用量。
+使用量：info命令中返回的used\_memory（数据大小）和used\_memory_rss（占用物理内存大小，即向OS申请了多少内存使用，实际使用中可能存在内存碎片）信息取max，即为使用量。
 
 使用率：使用量/购买容量\*100%
 
