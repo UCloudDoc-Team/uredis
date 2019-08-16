@@ -2,7 +2,7 @@
 
 {{indexmenu_n>6}}
 
-## 主备版Redis价格。
+## 主备版Redis价格
 
 （单位：元/GB/月）
 
