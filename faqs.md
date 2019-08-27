@@ -145,7 +145,7 @@ no-enviction：禁止淘汰数据。
 
 ## 主备版Redis的QPS是多少？
 
-主备Redis的QPS参考值是8W，具体QPS大小请参考[](/database/uredis/test)的压测数据文档； 负载100%后，QPS无法提高。
+主备Redis的QPS参考值是80000，具体QPS大小请参考[](/database/uredis/test)的压测数据文档； 负载100%后，QPS无法提高。
 
 ## 主备Redis为什么删除了大量key ，使用内存没有明显下降？
 
