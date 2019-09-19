@@ -12,7 +12,7 @@
 
 通过备份策略设置，用户可以根据业务需求设置是否开启自动备份，以及自动备份的时间。
 
-![image](/images/redis052904.png)
+![image](/images/redisv409.png)
 
 #### 手工备份
 
