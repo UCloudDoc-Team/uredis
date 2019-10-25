@@ -1,6 +1,6 @@
 # 分布式版Redis架构
 
-{{indexmenu_n>2}}
+
 
 分布式版Redis采用Redis分片+Proxy架构，Redis分片基于主备版Redis资源池，轻松突破Redis自身单线程瓶颈，支持在线扩容可极大满足对于Redis大容量或高性能的业务需求。
 

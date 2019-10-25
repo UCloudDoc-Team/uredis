@@ -1,6 +1,6 @@
 # 产品价格
 
-{{indexmenu_n>6}}
+
 
 ## 主备版Redis价格
 

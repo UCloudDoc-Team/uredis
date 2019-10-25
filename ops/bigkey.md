@@ -1,6 +1,6 @@
 # 主备Redis搜索大key
 
-{{indexmenu_n>1}}
+
 
 ## 背景信息
 
