@@ -4,9 +4,53 @@
 
 ## 产品版本
 
-主备版Redis支持Redis3.0、Redis3.2和Redis4.0.
+主备版Redis支持Redis3.0、Redis3.2、Redis4.0和Redis5.0.
 
 分布式版Redis基于Redis2.8，分布式版Redis（高性能版）基于Redis3.2。
+
+## Redis5.0版本新功能介绍
+
+Redis5.0版本是Redis的重大版本发布，新增数据结构Stream，是一个新的强大的支持多播的可持久化的消息队列，在消息队列方面提供了新的选择，具备丰富的应用场景和想象空间。
+
+Redis5.0最新特点具体有：
+
+1.新的Stream数据类型(Stream data type)
+
+2.新的 Redis 模块 API：Timers and Cluster API
+
+3.RDB 增加存储LFU和LRU信息
+
+4.集群管理器从 Ruby (redis-trib.rb) 移植到C代码。可以在redis-cli中。查看`redis-cli —cluster help`了解更多信息。
+
+5.新的有序集合(sorted set)命令：ZPOPMIN/MAX 和阻塞变量(blocking variants)
+
+6.升级 Active defragmentation 至 v2
+
+7.增强 HyperLogLog 的实现
+
+8.更好的内存统计报告
+
+9.许多包含子命令的命令现在都有一个 HELP 子命令
+
+10.对于客户端频繁连接和断开，连接时性能更好
+
+11.一些错误修复和其他方面的改进
+
+12.升级 Jemalloc 至 5.1 版本
+
+13.增加 CLIENT UNBLOCK 和 CLIENT ID
+
+14.增加命令LOLWUT
+
+15.对于不存在需要保持向后兼容性的地方，不再使用 "slave" 术语
+
+16.网络层中的差异进行了优化
+
+17.Lua改进
+
+18.增加动态的 HZ(Dynamic HZ) 来平衡空闲 CPU 使用率和响应性
+
+19.对 Redis 核心代码进行了重构，并在多方面进行了优化
 
 ## Redis4.0版本新功能介绍
 
