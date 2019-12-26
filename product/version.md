@@ -20,7 +20,7 @@ Redis5.0最新特点具体有：
 
 3.RDB 增加存储LFU和LRU信息
 
-4.集群管理器从 Ruby (redis-trib.rb) 移植到C代码。可以在redis-cli中。查看`redis-cli —cluster help`了解更多信息。
+4.集群管理器从 Ruby (redis-trib.rb) 移植到C代码。可以在redis-cli中。查看redis-cli —cluster help了解更多信息。
 
 5.新的有序集合(sorted set)命令：ZPOPMIN/MAX 和阻塞变量(blocking variants)
 
