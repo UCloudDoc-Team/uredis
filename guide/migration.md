@@ -103,8 +103,9 @@ redis-cli -h dest_ip -p dest_port -A PASSWORD --pipe < appendonly.aof
 下载地址： http://umemsh2.cn-sh2.ufileos.com/redis-port_4.0.tar
 
 使用方法如下:
+1
 ```
-1 redis-decode: DECODE dumped payload to human readable format (hex-encoding)
+  redis-decode: DECODE dumped payload to human readable format (hex-encoding)
   Usage:
     redis-decode [--ncpu=N] [--input=INPUT|INPUT] [--output=OUTPUT]
   Examples:
@@ -112,8 +113,9 @@ redis-cli -h dest_ip -p dest_port -A PASSWORD --pipe < appendonly.aof
     redis-decode    dump.rdb -o dump.log
     cat dump.rdb | redis-decode --ncpu=8 > dump.log
 ```
+2
 ```
-2 redis-dump: DUMP rdb file from master redis
+  redis-dump: DUMP rdb file from master redis
   Usage:
     redis-dump [--ncpu=N] (--master=MASTER|MASTER) [--output=OUTPUT] [--aof=FILE]
   Examples:
@@ -121,8 +123,9 @@ redis-cli -h dest_ip -p dest_port -A PASSWORD --pipe < appendonly.aof
     redis-dump    127.0.0.1:6379 -o dump.rdb -a
     redis-dump -m passwd@192.168.0.1:6380 -o dump.rdb -a dump.aof
 ```
+3
 ```
-3 redis-restore: RESTORE rdb file to target redis
+  redis-restore: RESTORE rdb file to target redis
   Usage:
     redis-restore [--ncpu=N] [--input=INPUT|INPUT] --target=TARGET [--aof=FILE] [--db=DB] [--unixtime-in-milliseconds=EXPR] 
   Examples:
@@ -131,8 +134,9 @@ redis-cli -h dest_ip -p dest_port -A PASSWORD --pipe < appendonly.aof
     redis-restore             -t 127.0.0.1:6379 --aof dump.aof
     redis-restore             -t 127.0.0.1:6379 --db=0
 ```
+4
 ```
-4 redis-sync: SYNC data from master to slave
+  redis-sync: SYNC data from master to slave
   Usage:
     redis-sync [--ncpu=N] (--master=MASTER|MASTER) --target=TARGET [--db=DB] [--tmpfile-size=SIZE [--tmpfile=FILE]]
   Examples:
