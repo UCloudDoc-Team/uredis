@@ -43,9 +43,9 @@
 控制台点击主备版Redis实例操作项中的“慢查询分析”，弹窗可查看最近的10条日志信息，登录Redis使用slowlog
 get命令可查看全部日志。
 
-#### 数据清理
+#### 清理数据
 
-主备版Redis实例控制台提供数据清理功能，支持清理全部（FLUSHALL）和指定数据库（FLUSHDB），FLUSHALL清空整个Redis实例的数据(删除所有数据库的所有key)，FLUSHDB清空当前数据库中的所有 key。
+主备版Redis实例控制台提供清理数据功能，支持清理全部（FLUSHALL）和指定数据库（FLUSHDB），FLUSHALL清空整个Redis实例的数据(删除所有数据库的所有key)，FLUSHDB清空当前数据库中的所有 key。
 
 ![image](/images/flushall01.png)
 
