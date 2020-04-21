@@ -1,7 +1,7 @@
 # 概览
 
 * 产品简介
-    * [什么是云内存Redis](/uredis/product/concepts)
+    * [什么是云内存Redis.](/uredis/product/concepts)
     * [主要概念](/uredis/product/terminology)
     * [产品优势](/uredis/product/superiority)
     * [版本说明](/uredis/product/version)
