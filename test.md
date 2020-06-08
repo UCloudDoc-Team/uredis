@@ -47,3 +47,4 @@ redis-benchmark -c 64 -n 5000000 -P 100 -h IP -d $字节 -t get,set -q
 ```
 
 ![image](/images/test_3.png)
+
