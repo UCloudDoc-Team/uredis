@@ -16,41 +16,37 @@ Redis5.0最新特点具体有：
 
 1.新的Stream数据类型(Stream data type)
 
-2.新的 Redis 模块 API：Timers and Cluster API
+2.RDB 增加存储LFU和LRU信息
 
-3.RDB 增加存储LFU和LRU信息
+3.新的有序集合(sorted set)命令：ZPOPMIN/MAX 和阻塞变量(blocking variants)
 
-4.集群管理器从 Ruby (redis-trib.rb) 移植到C代码。可以在redis-cli中。查看redis-cli —cluster help了解更多信息。
+4.升级 Active defragmentation 至 v2
 
-5.新的有序集合(sorted set)命令：ZPOPMIN/MAX 和阻塞变量(blocking variants)
+5.增强 HyperLogLog 的实现
 
-6.升级 Active defragmentation 至 v2
+6.更好的内存统计报告
 
-7.增强 HyperLogLog 的实现
+7.许多包含子命令的命令现在都有一个 HELP 子命令
 
-8.更好的内存统计报告
+8.对于客户端频繁连接和断开，连接时性能更好
 
-9.许多包含子命令的命令现在都有一个 HELP 子命令
+9.一些错误修复和其他方面的改进
 
-10.对于客户端频繁连接和断开，连接时性能更好
+10.升级 Jemalloc 至 5.1 版本
 
-11.一些错误修复和其他方面的改进
+11.增加 CLIENT UNBLOCK 和 CLIENT ID
 
-12.升级 Jemalloc 至 5.1 版本
+12.增加命令LOLWUT
 
-13.增加 CLIENT UNBLOCK 和 CLIENT ID
+13.对于不存在需要保持向后兼容性的地方，不再使用 "slave" 术语
 
-14.增加命令LOLWUT
+14.网络层中的差异进行了优化
 
-15.对于不存在需要保持向后兼容性的地方，不再使用 "slave" 术语
+15.Lua改进
 
-16.网络层中的差异进行了优化
+16.增加动态的 HZ(Dynamic HZ) 来平衡空闲 CPU 使用率和响应性
 
-17.Lua改进
-
-18.增加动态的 HZ(Dynamic HZ) 来平衡空闲 CPU 使用率和响应性
-
-19.对 Redis 核心代码进行了重构，并在多方面进行了优化
+17.对 Redis 核心代码进行了重构，并在多方面进行了优化
 
 ## Redis4.0版本新功能介绍
 
