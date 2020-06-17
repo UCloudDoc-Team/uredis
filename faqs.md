@@ -30,6 +30,8 @@
 BGREWRITEAOF BGSAVE DEBUG CONFIG SAVE SHUTDOWN SLAVEOF
 ```
 
+另外，对于FLUSH命令做了限制，用户可在控制台上实例详情页面中，通过“清理数据”功能进行FLUSHALL或FLUSHDB清理数据；如需使用该命令请联系技术支持。
+
 ## 分布式版Redis支持哪些协议？是否为原生协议？
 
 分布式版Redis支持部分原生Redis协议，支持pipeline，支持异步读写。
