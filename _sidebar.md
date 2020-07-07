@@ -14,11 +14,18 @@
     * [创建实例](/uredis/fast/create)
     * [访问实例](/uredis/fast/access)
 * 操作指南
-    * [实例管理](/uredis/guide/instance)
-    * [备份管理](/uredis/guide/backup)
-    * [监控告警](/uredis/guide/monitor)
-    * [配置文件管理](/uredis/guide/config)
-    * [数据迁移](/uredis/guide/migration)
+    * 主备版Redis
+       * [实例管理](/uredis/guide/instance)
+       * [备份管理](/uredis/guide/backup)
+       * [监控告警](/uredis/guide/monitor)
+       * [配置文件管理](/uredis/guide/config)
+       * [数据迁移](/uredis/guide/migration)
+    * 分布式版Redis
+       * [实例管理](/uredis/guide/clusterinstance)
+       * [备份管理](/uredis/guide/clusterbackup)
+       * [监控告警](/uredis/guide/clustermonitor)
+       * [配置文件管理](/uredis/guide/clusterconfig)
+       * [数据迁移](/uredis/guide/clustermigration)    
 * 产品应用
     * [行业应用](/uredis/situation/industry)
     * 应用场景
