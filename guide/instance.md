@@ -51,6 +51,13 @@ get命令可查看全部日志。
 
 ![image](/images/flushall02.png)
 
+#### 运维时间
+主备Redis产品提供运维时间窗口设置，用户可以根据自身业务选择时间段来做AOF重写。控制台上运维时间设置如下：
+![image](/images/redis202006003.png)
+
+![image](/images/redis202006004.png)
+
+
 ## 分布式Redis实例管理
 
 分布式版Redis控制台支持扩容、更改实例名称、更改业务组、更改告警模板、删除、续费等功能。
