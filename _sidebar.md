@@ -22,7 +22,7 @@
        * [数据迁移](/uredis/guide/migration)
     * 分布式版Redis
        * [实例管理](/uredis/guide/clusterinstance)
-       * [分片管理](/uredis/guide/clustershard)
+       * [数据分片管理](/uredis/guide/clustershard)
        * [备份管理](/uredis/guide/clusterbackup)
        * [监控告警](/uredis/guide/clustermonitor)
        * [数据迁移](/uredis/guide/clustermigration)    
