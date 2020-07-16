@@ -5,7 +5,11 @@
     * [什么是云内存Redis](/uredis/product/concepts)
     * [主要概念](/uredis/product/terminology)
     * [产品优势](/uredis/product/superiority)
-    * [版本说明](/uredis/product/version)
+    * 版本说明
+        * [产品版本](/uredis/product/version0)
+        * [Redis4.0版本新功能介绍](/uredis/product/version)
+        * [Redis5.0版本新功能介绍](/uredis/product/version5)
+        * [【通知】主备Redis 3.0版本停止售卖](/uredis/product/notice)
 * 产品架构
     * [主备版Redis架构](/uredis/architecture/uredis)
     * [分布式版Redis架构](/uredis/architecture/udredis)
