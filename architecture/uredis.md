@@ -18,4 +18,4 @@
 
 #### 兼容性
 
-主备版Redis支持redis3.0/3.2/4.0/5.0版本，兼容 Redis 协议命令。自建的Redis可以平滑迁移至主备版Redis。
+主备版Redis支持redis3.2/4.0/5.0版本，兼容 Redis 协议命令。自建的Redis可以平滑迁移至主备版Redis。
