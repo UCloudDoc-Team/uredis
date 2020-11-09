@@ -26,3 +26,20 @@ UCloud云内存UMem产品支持按年、按月、按时计费方式。
 | 北京二 | 可用区B | Memcache | 单机版 |  16         | 1.76              | 864            | 8640           | [立即购买](https://console.ucloud.cn/umem/memcache/create) |
 | 北京二 | 可用区B | Memcache | 单机版 |  24         | 2.64              | 1296           | 12960           | [立即购买](https://console.ucloud.cn/umem/memcache/create) |
 | 北京二 | 可用区B | Memcache | 单机版 |  32         | 3.52              | 1728            | 17280           | [立即购买](https://console.ucloud.cn/umem/memcache/create) |
+| 胡志明 | 可用区A | Redis | 主备版 |  1          | 0.23              | 110             | 1100            | [立即购买](https://console.ucloud.cn/umem/redis/create) |
+| 胡志明 | 可用区A | Redis | 主备版 |  2          | 0.46               | 220             | 2200            | [立即购买](https://console.ucloud.cn/umem/redis/create) |
+| 胡志明 | 可用区A | Redis | 主备版 |  4          | 0.92               | 440             | 4400            | [立即购买](https://console.ucloud.cn/umem/redis/create) |
+| 胡志明 | 可用区A | Redis | 主备版 |  6          | 1.38               | 660             | 6600            | [立即购买](https://console.ucloud.cn/umem/redis/create) |
+| 胡志明 | 可用区A | Redis | 主备版 |  8          | 1.84               | 880             | 8800            | [立即购买](https://console.ucloud.cn/umem/redis/create) |
+| 胡志明 | 可用区A | Redis | 主备版 |  12          | 2.76             | 1320             | 13200            | [立即购买](https://console.ucloud.cn/umem/redis/create) |
+| 胡志明 | 可用区A | Redis | 主备版 |  16          | 3.68               | 1760             | 17600            | [立即购买](https://console.ucloud.cn/umem/redis/create) |
+| 胡志明 | 可用区A | Redis | 主备版 |  24          | 5.52              | 2640             | 26400            | [立即购买](https://console.ucloud.cn/umem/redis/create) |
+| 胡志明 | 可用区A | Redis | 主备版 |  32          | 7.36              | 3520             | 35200            | [立即购买](https://console.ucloud.cn/umem/redis/create) |
+| 胡志明 | 可用区A | Redis | 分布式版 |  ——         | 0.19 /G              | 90 /G            | 900 /G           | [立即购买](https://console.ucloud.cn/umem/redis/create) |
+| 胡志明 | 可用区A | Memcache | 单机版 |  1         | 0.14              | 68            | 680           | [立即购买](https://console.ucloud.cn/umem/memcache/create) |
+| 胡志明 | 可用区A | Memcache | 单机版 |  2         | 0.28              | 136           | 1360           | [立即购买](https://console.ucloud.cn/umem/memcache/create) |
+| 胡志明 | 可用区A | Memcache | 单机版 |  4         | 0.56              | 272            | 2720           | [立即购买](https://console.ucloud.cn/umem/memcache/create) |
+| 胡志明 | 可用区A | Memcache | 单机版 |  8         | 1.12              | 544            | 5440           | [立即购买](https://console.ucloud.cn/umem/memcache/create) |
+| 胡志明 | 可用区A | Memcache | 单机版 |  16         | 2.24              | 1088            | 10880           | [立即购买](https://console.ucloud.cn/umem/memcache/create) |
+| 胡志明 | 可用区A | Memcache | 单机版 |  24         | 3.36             | 1632           | 16320           | [立即购买](https://console.ucloud.cn/umem/memcache/create) |
+| 胡志明 | 可用区A | Memcache | 单机版 |  32         | 4.48              | 2176            | 21760           | [立即购买](https://console.ucloud.cn/umem/memcache/create) |
