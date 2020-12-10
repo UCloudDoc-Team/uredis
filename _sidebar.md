@@ -1,4 +1,3 @@
-<div class="sidebar_title"> 云内存 Redis</div>
 
 * [概览](/uredis/README) 
 * 产品简介
