@@ -14,7 +14,7 @@
 
 ## 单实例最高支持多大容量？
 
-主备版redis实例的容量上限为32G（北京二最大支持64G，其他机房超过32G需要提工单申请）
+主备版redis实例的容量上限为32G（华北（北京）最大支持64G，其他机房超过32G需要提工单申请）
 
 分布式版redis实例是没有容量瓶颈限制的，但超过1T容量需要工单申请。
 
@@ -44,7 +44,7 @@ MSETNX - 不支持多Key操作
 
 SORT - 不支持BY选项和GET选项
 
-通过对分布式版Redis的性能优化改造，北京二、上海二C、洛杉矶、台北，香港A及首尔提供了具有高性能的分布式版Redis，经测试QPS性能达到同配置主备Redis的3倍，用户新建的分布式版Redis默认是具有高性能的版本，存量的分布式Redis实例不受影响。具有高性能的分布式版Redis目前不支持部分协议（相比Redis3.2），具体如下：
+通过对分布式版Redis的性能优化改造，华北（北京）、上海二C、洛杉矶、台北，香港A及首尔提供了具有高性能的分布式版Redis，经测试QPS性能达到同配置主备Redis的3倍，用户新建的分布式版Redis默认是具有高性能的版本，存量的分布式Redis实例不受影响。具有高性能的分布式版Redis目前不支持部分协议（相比Redis3.2），具体如下：
 
 ```
 KEYS MIGRATE MOVE OBJECT RANDOMKEY MSETNX BLPOP BRPOP BRPOPLPUSH PFMERGE GEOADD GEOPOS GEODIST GEORADIUS GEORADIUSBYMEMBER GEOHASH PSUBSCRIBE PUBLISH PUBSUB PUNSUBSCRIBE SUBSCRIBE UNSUBSCRIBE DISCARD EXEC MULTI UNWATCH WATCH EVAL EVALSHA SCRIPT AUTH ECHO SELECT BGREWRITEAOF BGSAVE CLIENT CONFIG DBSIZE DEBUG FLUSHALL FLUSHDB LASTSAVE MONITOR PSYNC SAVE SHUTDOWN SLAVEOF SLOWLOG SYNC TIME
