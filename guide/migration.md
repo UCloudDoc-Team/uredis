@@ -7,7 +7,7 @@
 ### Redis3.2及以下版本
 
 
-下载地址：<http://redis-import-tool.ufile.ucloud.com.cn/uredis-redis-port>
+下载地址：<https://redis-import-tool.cn-bj.ufileos.com/uredis-redis-port>
 
 1、主备Redis同步导入导出
 
@@ -41,7 +41,7 @@ redis-cli -h dest_ip -p dest_port -A PASSWORD --pipe < appendonly.aof
 
 ### Redis4.0版本
 
-下载地址： http://umemsh2.cn-sh2.ufileos.com/redis-port_4.0.tar
+下载地址： https://umemsh2.cn-sh2.ufileos.com/redis-port_4.0.tar
 
 使用方法如下:
 
