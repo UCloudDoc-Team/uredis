@@ -35,7 +35,7 @@ BGREWRITEAOF BGSAVE DEBUG CONFIG SAVE SHUTDOWN SLAVEOF
 不支持协议如下（相比Redis 2.8）：
 
 ```
-BLPOP BRPOP CLIENT CONFIG DBSIZE DISCARD EVAL  EVALSHA EXEC  MIGRATE MONITOR MOVE MULTI PSUBSCRIBE PUBLISH PUNSUBSCRIBE SCAN SCRIPT  SELECT  SLAVEOF SLOWLOG SMOVE SUBSCRIBE SYNC UNSUBSCRIBE UNWATCH WATCH BRPOPLPUSH DEBUG
+BLPOP BRPOP CLIENT CONFIG DBSIZE DISCARD EVAL  EVALSHA EXEC  MIGRATE MONITOR MOVE MULTI PSUBSCRIBE PUBLISH PUNSUBSCRIBE  SCRIPT  SELECT  SLAVEOF SLOWLOG SMOVE SUBSCRIBE SYNC UNSUBSCRIBE UNWATCH WATCH BRPOPLPUSH DEBUG
 ```
 
 部分支持协议：
@@ -92,11 +92,11 @@ select其它无意义。Redis的keys命令，比较耗费性能，业务中尽�
 
 key大小为128B，value大小为100B，并发连接数为1000；
 
-1G: 读QPS可以达到3000，写QPS可以达到3000；
+8G两分片: QPS可以达到12W+；
 
-20G: 读QPS可以达到60000，写QPS可以达到20000；
+16G四分片: QPS可以达到24W+；
 
-内存实例性能和内存容量成线性关系，单个IP最高支持10万QPS，高于此值需要同时两个或多个IP。
+内存实例性能和内存容量成线性关系，单分片可提供6W+ QPS。单个IP最高支持10万QPS，高于此值提高性能需要同时两个或多个IP。
 
 分布式版Redis性能和容量直接相关，可以水平扩展，没有QPS限制。
 
@@ -106,7 +106,7 @@ key大小为128B，value大小为100B，并发连接数为1000；
 
 ## 分布式版云内存redis是否支持缩容到16G以下
 
-分布式版redis最小容量为16G，不支持缩容到16G以下。如果需要16G以下的容量，建议选择主备版redis，主备版redis完全兼容分布式版redis，而且支持更多的特性，性能也更高。对于控制台改版之前已创建的容量小于16G的分布式版Redis不再支持缩容，用户可以提工单在线同步迁移到主备版Reids，使用的IP不变更。
+分布式版redis最小容量为8G，不支持缩容到8G以下。如果需要8G以下的容量，建议选择主备版redis，主备版redis完全兼容分布式版redis，而且支持更多的特性，性能也更高。对于控制台改版之前已创建的容量小于8G的分布式版Redis不再支持缩容，用户可以提工单在线同步迁移到主备版Reids，使用的IP不变更。
 
 ## 主备版云内存redis的从节点（Slave）是否会与其主节点（Master）一起保持最新状态？
 
