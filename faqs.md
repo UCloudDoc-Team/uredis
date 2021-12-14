@@ -44,7 +44,7 @@ MSETNX - 不支持多Key操作
 
 SORT - 不支持BY选项和GET选项
 
-通过对分布式版Redis的性能优化改造，华北（北京）、上海二C、洛杉矶、台北，香港A及首尔提供了具有高性能的分布式版Redis，经测试QPS性能达到同配置主备Redis的3倍，用户新建的分布式版Redis默认是具有高性能的版本，存量的分布式Redis实例不受影响。具有高性能的分布式版Redis目前不支持部分协议（相比Redis3.2），具体如下：
+通过对分布式版Redis的性能优化改造，华北（北京）、上海二C、洛杉矶、台北，香港A及首尔等可用区（未开通的可用区可申请开通）提供了具有高性能的分布式版Redis，经测试QPS性能达到同配置主备Redis的3倍，用户新建的分布式版Redis默认是具有高性能的版本，存量的分布式Redis实例不受影响。具有高性能的分布式版Redis目前不支持部分协议（相比Redis3.2），具体如下：
 
 ```
 KEYS MIGRATE MOVE OBJECT RANDOMKEY MSETNX BLPOP BRPOP BRPOPLPUSH PFMERGE GEOADD GEOPOS GEODIST GEORADIUS GEORADIUSBYMEMBER GEOHASH PSUBSCRIBE PUBLISH PUBSUB PUNSUBSCRIBE SUBSCRIBE UNSUBSCRIBE DISCARD EXEC MULTI UNWATCH WATCH EVAL EVALSHA SCRIPT AUTH ECHO SELECT BGREWRITEAOF BGSAVE CLIENT CONFIG DBSIZE DEBUG FLUSHALL FLUSHDB LASTSAVE MONITOR PSYNC SAVE SHUTDOWN SLAVEOF SLOWLOG SYNC TIME
@@ -211,3 +211,6 @@ QPS左右； 如果用户业务服务的短连接请求非常高，建议使用�
 
 主备Redis实例删除后，备份（包括自动备份和手工备份）会保留7天，7天之后自动回收。
 
+## cluster 命令支持与禁用
+与原生的cluster一样对于常用的redis操作都是支持的，对于cluster节点的操作，只支持部分查询操作CLUSTER NODES，CLUSTER SLOTS，CLUSTER KEYSLOT，节点的修改操作可以在控制台实现。对于跨节点的操作不支持如mget，keys等。
+![image](/images/redis1214.png)
