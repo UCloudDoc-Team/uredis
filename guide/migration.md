@@ -9,6 +9,7 @@ UDTS 可以将 Redis 作为数据源/目标 进行全量+增量任务的传输�
 注意事项:
 
 当 Redis 源为公网端，且为集群模式的情况下，需要将目标端 VPC 下的子网 ID 绑定 NATGW 方能完成传输任务
+
 需要确保源库的 repl-diskless-sync 配置为 NO
 
 详细文档: https://docs.ucloud.cn/udts/type/redissource
