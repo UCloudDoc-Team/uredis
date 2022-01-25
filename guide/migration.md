@@ -4,7 +4,20 @@
 
 主备版redis-port数据同步，导入导出工具
 
-### Redis3.2及以下版本
+### UDTS迁移
+
+UDTS 可以将 Redis 作为数据源/目标 进行全量+增量任务的传输。
+
+注意事项
+
+当 Redis 源为公网端，且为集群模式的情况下，需要将目标端 VPC 下的子网 ID 绑定 NATGW 方能完成传输任务
+需要确保源库的 repl-diskless-sync 配置为 NO
+
+详细文档 https://docs.ucloud.cn/udts/type/redissource
+
+### redis-port迁移
+
+#### Redis3.2及以下版本
 
 
 下载地址：<https://redis-import-tool.cn-bj.ufileos.com/uredis-redis-port>
@@ -39,7 +52,7 @@ redis-cli -h dest_ip -p dest_port -A PASSWORD --pipe < appendonly.aof
 
 说明：分布式Redis与主备Redis进行迁移，请提交非标需求，我们后台进行同步迁移。
 
-### Redis4.0版本
+#### Redis4.0版本
 
 下载地址： https://umemsh2.cn-sh2.ufileos.com/redis-port_4.0.tar
 

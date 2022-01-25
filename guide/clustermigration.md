@@ -1,7 +1,21 @@
-## 数据迁移
+# 数据迁移
 
 
-### 分布式Redis数据迁移
+## 分布式Redis数据迁移
+
+### UDTS迁移
+
+UDTS 可以将 分布式Redis 作为目的端进行全量+增量任务的传输。
+
+注意事项
+
+对于源和目的集群节点数目不需要一致
+当 Redis 源为公网端，且为集群模式的情况下，需要将目标端 VPC 下的子网 ID 绑定 NATGW 方能完成传输任务
+需要确保源库的 repl-diskless-sync 配置为 NO
+
+详细文档 https://docs.ucloud.cn/udts/type/redissource
+
+### redis-port迁移
 
 一、分布式版redis-port数据同步，导入dump工具
 
