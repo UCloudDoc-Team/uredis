@@ -13,3 +13,10 @@
 #### 不同点
 cluster支持所有redis的原生命令（除了禁用的命令），但对于节点间的命令操作如mget，keys等命令不支持。
 性能上，cluster命令请求直接发送到后端redis，udredis需要经过代理转发到后端redis，cluster的性能会优于udredis。
+
+####版本升级
+2022.4月中 cluster集群版本做出调整升级
+1.所有的节点在创建的时候不在为udrediscluster-开头，同步到udredis-开头
+2.路由复用原生clster，0-16383，目前可以通过路由区分后端为cluster集群还是代理分片。
+3.所有集群创建的时候会同步创建代理，客户可以直接使用后端集群，也可以通过代理连接使用集群。
+4.之前创建的cluster集群（udrediscluster-开头）的实例如果需要代理，我们可以后端非标添加代理。
