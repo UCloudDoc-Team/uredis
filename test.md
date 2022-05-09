@@ -181,10 +181,10 @@ Get QPS <br />
 #!/bin/bash
 memtier_benchmark -s IP -p 6379 -c 30 -t 8 -n 1000 --ratio=10:0 --reconnect-interval=1
 memtier_benchmark -s IP -p 6379 -c 30 -t 8 -n 1000 --ratio=5:5 --reconnect-interval=1
-memtier_benchmark -s IP -p 6379 -c 30 -t 8 -n 1000 --ratio=0:5 --reconnect-interval=1
+memtier_benchmark -s IP -p 6379 -c 30 -t 8 -n 1000 --ratio=0:10 --reconnect-interval=1
 ```
 #### 测试结果
-| 产品规格 | 10:0 | 5:5 | 0:5 |
+| 产品规格 | 10:0 | 5:5 | 0:10 |
 | -- | -- | -- | -- |
 | 快杰1G | 29111 | 28039 | 28433 |
 | 快杰2G | 27748 | 28136 | 27952 |
