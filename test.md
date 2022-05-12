@@ -4,7 +4,7 @@
 
 测试条件：
 
-1.开启pipeline，不同连接数
+1.开启pipeline，不同连接数.
 
 2.关闭pipeline，不同连接数
 
