@@ -2,7 +2,7 @@
 
 ## 物理机普通机型测试
 
-测试条件：
+测试条件
 
 1.开启pipeline，不同连接数.
 
@@ -105,7 +105,7 @@ Get性能<br />
 #### 折线图
 Set QPS <br />
 ![image](/images/set_qps_nopipeline.png)
-Get PQS <br />
+Get QPS <br />
 ![image](/images/get_qps_nopipeline.png)
 
 ### 2. 不同data size，关闭pipeline
@@ -181,7 +181,7 @@ Set QPS <br />
 Get QPS <br />
 ![image](/images/get_qps_pipeline.png)
 ### 4. 短链接压测
-短链接的压测主要是测试在不同读写比例情况下不同规格reids产品的性能。<br />
+短链接的压测主要是测试在不同读写比例情况下不同规格redis产品的性能。<br />
 测试脚本：
 ```
 #!/bin/bash
