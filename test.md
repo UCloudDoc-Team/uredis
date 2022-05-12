@@ -51,28 +51,29 @@ redis-benchmark -c 64 -n 5000000 -P 100 -h IP -d $字节 -t get,set -q
 
 
 ## 快杰主备redis产品测试
-### redis-server
+### 测试环境
+#### redis-server
 软件版本：6.0
 
 服务器机型：快杰版主备redis、物理机普通机型
 
 产品规格：快杰1G、快杰2G、快杰4G、快杰6G、快杰8G、物理机普通机型
 
-### redis-benchmark
+#### redis-benchmark
 服务器机型： 快杰O型
 
 系统版本：CentOS 8.3
 
 机器配置：16C/16G
 
-### memtier_benchmark
+#### memtier_benchmark
 服务器机型： 快杰O型
 
 系统版本：CentOS 6.4
 
 机器配置：16C/16G
-## 测试场景
-### 1. 不同连接数，关闭pipeline
+### 测试场景
+#### 1. 不同连接数，关闭pipeline
 测试脚本：
 ```
 #!/bin/bash
@@ -80,7 +81,7 @@ for clients in {1,2,4,8,16,32,64,128,256,512,800}; do
     redis-benchmark  -c $连接数 -n 1000000 -h IP -d 256 -t get,set -q --threads 4
 done
 ```
-#### 测试结果
+##### 测试结果
 Set性能<br />
 
 | 产品规格 | 1 | 2 | 4 | 8 | 16 | 32 | 64 | 128 | 256 | 512 | 800 |
@@ -102,13 +103,13 @@ Get性能<br />
 | 快杰6G | 16578 | 30709 | 57822 | 98427 | 142653 | 173671 | 190216 | 199680 | 195114 | 191587 | 212024 |
 | 快杰8G | 16578 | 30815 | 59633 | 102553 | 142836 | 190222 | 210260 | 190186 | 199920 | 210128 | 209995 |
 | 物理机普通机型 | 9973 | 19272 | 31571 | 47803 | 66246 | 86145 | 90371 | 90973 | 93531 | 95892 | 91907 |
-#### 折线图
+##### 折线图
 Set QPS <br />
 ![image](/images/set_qps_nopipeline.png)
 Get QPS <br />
 ![image](/images/get_qps_nopipeline.png)
 
-### 2. 不同data size，关闭pipeline
+#### 2. 不同data size，关闭pipeline
 测试脚本：
 ```
 #!/bin/bash
@@ -119,7 +120,7 @@ done
 data_size=32768
 redis-benchmark -c 64 -n 50000 -P 100 -h IP -d $data_size -t get,set -q --threads 4
 ```
-#### 测试结果
+##### 测试结果
 Set性能<br />
 
 | 产品规格 | 1字节 | 8字节 | 64字节 | 512字节 | 4096字节 | 32768字节 |
@@ -139,12 +140,12 @@ Get性能<br />
 | 快杰4G | 210260 | 199960 | 210216 | 199960 | 121036 | 53319 |
 | 快杰6G | 199415 | 190222 | 199920 | 199680 | 117605 | 61519 |
 | 快杰8G | 199920 | 181554 | 181554 | 181554 | 117481 | 57110 |
-#### 折线图
+##### 折线图
 Set QPS <br />
 ![image](images/set_bigdatasize_nopipeline.png)
 Get QPS <br />
 ![image](images/get_bigdatasize_nopipeline.png)
-### 3. 不同连接数，开启pipeline
+#### 3. 不同连接数，开启pipeline
 测试脚本：
 ```
 #!/bin/bash
@@ -152,7 +153,7 @@ for clients in {1,2,4,8,16,32,64,128,256,512,800}; do
     redis-benchmark  -c $clients -n 5000000 -P 100 -h IP  -d 256 -t get,set -q --threads 4
 done
 ```
-#### 测试结果
+##### 测试结果
 Set性能<br />
 
 | 产品规格 | 1 | 2 | 4 | 8 | 16 | 32 | 64 | 128 | 256 | 512 | 800 |
@@ -175,12 +176,12 @@ Get性能<br />
 | 快杰8G | 644246 | 1174536 | 1665556 | 1663340 | 1663340 | 1661681 | 1533742 | 1533742 | 1535626 | 1533742 | 1423284 |
 | 物理机普通机型 | 230075 | 406834 | 418795 | 475737 | 491980 | 498952 | 505152 | 542711 | 501705 | 501403 | 482020 |
 
-#### 折线图
+##### 折线图
 Set QPS <br />
 ![image](/images/set_qps_pipeline.png)
 Get QPS <br />
 ![image](/images/get_qps_pipeline.png)
-### 4. 短链接压测
+#### 4. 短链接压测
 短链接的压测主要是测试在不同读写比例情况下不同规格redis产品的性能。<br />
 测试脚本：
 ```
@@ -189,7 +190,7 @@ memtier_benchmark -s IP -p 6379 -c 30 -t 8 -n 1000 --ratio=10:0 --reconnect-inte
 memtier_benchmark -s IP -p 6379 -c 30 -t 8 -n 1000 --ratio=5:5 --reconnect-interval=1
 memtier_benchmark -s IP -p 6379 -c 30 -t 8 -n 1000 --ratio=0:10 --reconnect-interval=1
 ```
-#### 测试结果
+##### 测试结果
 
 | 产品规格 | 10:0 | 5:5 | 0:10 |
 | -- | -- | -- | -- |
