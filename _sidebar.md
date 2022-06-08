@@ -9,6 +9,7 @@
         * [Redis4.0版本新功能介绍](/uredis/product/version)
         * [Redis5.0版本新功能介绍](/uredis/product/version5)
         * [Redis6.0版本新功能介绍](/uredis/product/version6)
+        * [Redis7.0版本新功能介绍](/uredis/product/version7)
         * [【通知】主备Redis 3.0&3.2版本停止售卖](/uredis/product/notice)
 * 产品架构
     * [主备版Redis架构](/uredis/architecture/uredis)
