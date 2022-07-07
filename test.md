@@ -118,7 +118,7 @@ for data_size in {1,8,64,512,4096}; do
 done
 # 32KiB大小的data size长时间跑容易使1GB容量规格实例oom。
 data_size=32768
-redis-benchmark -c 64 -n 50000 -P 100 -h IP -d $data_size -t get,set -q --threads 4
+redis-benchmark -c 64 -n 50000 -h IP -d $data_size -t get,set -q --threads 4
 ```
 ##### 测试结果
 Set性能<br />
