@@ -24,7 +24,7 @@
 
 #### 性能
 
-压测文档: 待定
+压测文档：[压力测试](/uredis/test_highperformance.md)
 
 ## 容量memory和核数(cpu)关系
 
