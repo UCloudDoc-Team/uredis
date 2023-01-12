@@ -26,13 +26,13 @@
 
 压测文档：[压力测试](/uredis/test_highperformance.md)
 
-## 容量memory和核数(cpu)关系
+## 容量memory和io_thread关系
 
-4  <= memory <=32   --> 核数 = 4
-
-32 <  memory <= 52  --> 核数 = 6
-
-memory >= 64 -> 核数 = 8
+| 容量              | io_thread |
+| ------------------| ----------- |
+| 4G、6G、8G、12G、16G、24G、32G  | 4  |
+| 40G、52G  | 6  |
+| 64G       |8   |
 
 
 ### 标注：
