@@ -28,6 +28,8 @@
        * [监控告警](/uredis/guide/monitor)
        * [配置文件管理](/uredis/guide/config)
        * [数据迁移](/uredis/guide/migration)
+       * [大key分析](/uredis/guide/bigkey)
+       * [热key分析](/uredis/guide/hotkey)
     * 分布式版Redis
        * [实例管理](/uredis/guide/clusterinstance)
        * [数据分片管理](/uredis/guide/clustershard)
