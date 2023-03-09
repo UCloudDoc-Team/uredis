@@ -23,7 +23,7 @@ URedis以最近最少使用算法LFU（Least Frequently Used）为基础，经�
 4. 等待任务执行结束后任务状态边改成功,此时可以点击下载按钮下载热key分析的文件。
    ![image](/images/hotkeys_4.png)
 
-5. 下载完成后可以查看热key分析文件，结果文件两部分，第一部分是根据key的热度扫出来的热key，第二部分是扫出来的热key数量：
+5. 下载完成后可以查看热key分析文件，结果文件分为两部分。
    ![image](/images/hotkeys_5.png)
    * **第一部分**：展示热key的详细信息，总共有3列。第一列是key所在的db，第二列是key的访问热度，第三列是key名。
    * **第二部分**：热key的数量。
