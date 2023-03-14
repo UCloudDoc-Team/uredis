@@ -35,3 +35,5 @@ URedis 6.0 禁用ACL
 URedis 6.0 不支持模版
 
 URedis 6.0 不支持SSL
+
+URedis 6.0 不支持多线程
