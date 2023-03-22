@@ -213,5 +213,5 @@ QPS左右； 如果用户业务服务的短连接请求非常高，建议使用�
 与原生的cluster一样对于常用的redis操作都是支持的，对于cluster节点的操作，只支持部分查询操作CLUSTER NODES，CLUSTER SLOTS，CLUSTER KEYSLOT，节点的修改操作可以在控制台实现。对于跨节点的操作不支持如mget，keys等。
 ![image](/images/redis1214.png)
 
-## 主备Redis带宽使用
-主备Redis带宽上限取决于宿主机情况，如需高带宽，可以了解性能加强型主备Redis。
+## 主备Redis带宽
+主备Redis带宽理论值小于2Gb，实际带宽取决于宿主机情况，如需稳定高带宽，可以了解性能加强型主备Redis。
