@@ -11,7 +11,7 @@
         * [Redis6.0版本新功能介绍](/uredis/product/version6)
         * [Redis7.0版本新功能介绍](/uredis/product/version7)
         * [【通知】主备Redis 3.0&3.2版本停止售卖](/uredis/product/notice)
-        * [【通知】华北一可用区D停止售卖](/uredis/product/stopsell)
+        * [【通知】可用区停售通知](/uredis/product/stopsell)
 * 产品架构
     * [主备版Redis架构](/uredis/architecture/uredis)
     * [分布式版Redis架构](/uredis/architecture/udredis)
