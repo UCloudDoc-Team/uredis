@@ -69,14 +69,6 @@ select其它无意义。Redis的keys命令，比较耗费性能，业务中尽�
 
 在控制台进行扩容后，后台分配的资源也可能需要调整；增加资源，是通过在线迁移实现，一般会选择该实例QPS较低时进行。用户如果需要及时增加后台资源，可以联系技术支持。
 
-## 如何将数据导入导出云内存Redis？
-
-可以使用以下两种工具导入导出数据，使用方法见下载包说明。
-
-下载链接: [import\_data.zip](http://tools.ufile.ucloud.cn/import_data.zip)
-
-下载链接:
-[import\_data\_online.zip](http://redis-import-tool.cn-bj.ufileos.com/import_data_online.zip)
 
 ## 使用主备版云内存Redis的高可用需要注意什么
 
