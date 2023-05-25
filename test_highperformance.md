@@ -5,7 +5,7 @@
 #### redis-server
 软件版本：性能加强版redis
 
-产品规格：4G、6G、8G、12G、16G、24G、32G、40G、52G、64G
+产品规格：4G、6G、8G、12G、16G、24G、32G、40G、48G、56G、64G
 
 #### redis-benchmark
 服务器机型： 快杰O型
