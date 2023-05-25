@@ -200,7 +200,7 @@ memtier_benchmark -s IP -p 6379 -c 30 -t 8 -n 1000 --ratio=0:10 --reconnect-inte
 | 快杰6G | 27491 | 27870  | 28297 |
 | 快杰8G | 28037 | 27965 | 27916 |
 
-## 性能加强型redis产品测试
+## 性能加强版redis产品测试
 
 #### redis-server
 软件版本：性能加强版redis

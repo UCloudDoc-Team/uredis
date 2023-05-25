@@ -1,6 +1,6 @@
 # 压力测试
 
-## 性能加强型redis产品测试
+## 性能加强版redis产品测试
 
 #### redis-server
 软件版本：性能加强版redis
