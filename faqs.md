@@ -117,7 +117,9 @@ key大小为128B，value大小为100B，并发连接数为1000；
 
 ## 云内存Redis 默认的数据逐出策略是什么？
 
-分布式版Redis默认淘汰策略：volatile-lru，如果想修改需要提工单进行非标操作；
+前缀以umem开头的分布式Redis默认淘汰策略：volatile-lru，如果想修改需要提工单进行非标操作；
+
+前缀以udredis开头分布式版Redis默认淘汰策略：no-enviction，如果想修改需要提工单进行非标操作；
 
 主备版Redis默认淘汰策略：no-enviction，用户可在控制台配置文件管理中更改；
 
