@@ -319,7 +319,7 @@ Get QPS <br />
 
 单分片容量： 6GB
 
-代理：NVME(或SSD)分布式版Redis代理
+代理：NVMe(或SSD)分布式版Redis代理
 
 #### redis-benchmark
 服务器机型： 快杰O型
