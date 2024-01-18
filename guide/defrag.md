@@ -17,3 +17,5 @@
     ![image](/images/defrag_2.png)
 3. 点开定时任务管理窗口，可以看到我们刚设置完成的碎片整理任务信息，支持取消
     ![image](/images/defrag_3.png)
+4. 等到任务开始时间，实例会打开碎片整理开关，持续整理至设定的结束时间，期间支持取消
+    ![image](/images/defrag_4.png)
