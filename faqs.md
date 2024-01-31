@@ -50,7 +50,7 @@ SORT - 不支持BY选项和GET选项
 select其它无意义。Redis的keys命令，比较耗费性能，业务中尽可能降低keys的使用频率，或者使用其它方式替代。mget，mset，del等批量命令或pipeline方式，建议批量数量不宜超过1000，数量过多易造成请求延时或超时现象。
 
 ## 分布式版Redis后端分片 cluster 命令支持与禁用
-与原生的cluster一样对于常用的redis操作都是支持的，对于cluster节点的操作，只支持部分查询操作CLUSTER NODES，CLUSTER SLOTS，CLUSTER KEYSLOT，节点的修改操作可以在控制台实现。对于跨节点的操作不支持如mget，keys等。
+与原生的cluster一样对于常用的Redis操作都是支持的，对于cluster节点的操作，只支持部分查询操作CLUSTER NODES，CLUSTER SLOTS，CLUSTER KEYSLOT，节点的修改操作可以在控制台实现。对于跨节点的操作不支持如mget，keys等。
 ![image](/images/redis1214.png)
 
 ## 云内存Redis如何确保存储服务的高可用？

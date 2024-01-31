@@ -9,7 +9,7 @@ Redis分片基于主备版Redis资源池，轻松突破Redis自身单线程瓶�
 
 ![image](/images/uredis002.png)
 
-分布式版Redis的每个redis分片就是一个主备版Redis，同主备版Redis共享资源池，架构同主备版Redis高可用架构。单个分片的容量限制和扩缩容规则同主备版Redis保持一致。
+分布式版Redis的每个Redis分片就是一个主备版Redis，同主备版Redis共享资源池，架构同主备版Redis高可用架构。单个分片的容量限制和扩缩容规则同主备版Redis保持一致。
 分布式版Redis的代理是高可用架构，容器版代理当宿主机宕机时会由系统自动迁移至其他宿主机；快杰版代理由一主一备两台主机组成，主宕机后会由系统将高可用IP迁移至备主机。
 
 #### 2.分布式高性能udredis(22年4月升级前创建版本)与cluster集群的对比
@@ -19,11 +19,11 @@ Redis分片基于主备版Redis资源池，轻松突破Redis自身单线程瓶�
 #### 相同点
 在操作上，除代理外，两者操作相同，都可以在控制台分分片管理上对分片容量进行扩缩容，也可以对节点进行拆分操作。
 节点都提供主备节点，保证节点的高可用。
-cluster集群同样支持添加代理，使用代理来适配单机redis的用法。
+cluster集群同样支持添加代理，使用代理来适配单机Redis的用法。
 
 #### 不同点
 cluster集群支持无代理使用，客户端使用集群模式连接后端Redis分片后直接使用。分布式高性能udredis则必须使用代理连接。
-cluster集群支持所有redis原生cluster命令（除了集群管理或禁用的命令），但同时也受到原生cluster命令的限制，比如涉及到多个key slot键值的命令如mget，keys。
+cluster集群支持所有Redis原生cluster命令（除了集群管理或禁用的命令），但同时也受到原生cluster命令的限制，比如涉及到多个key slot键值的命令如mget，keys。
 cluster集群可以选择4.0、5.0、6.0版本创建。
 性能上，cluster集群命令请求直接发送到后端Redis分片，而分布式高性能udredis需要经过代理转发到后端Redis分片，所以直连cluster集群的性能会优于分布式高性能udredis。
 
@@ -41,4 +41,4 @@ cluster集群可以选择4.0、5.0、6.0版本创建。
 
 1.创建的实例ID不再以udrediscluster-开头，改为udredis-开头。
 
-2.新建的实例默认都为cluster集群，Key slot跟原生redis cluster保持一致为0-16383，目前可以通过Key slot区分后端为cluster集群还是代理分片。
+2.新建的实例默认都为cluster集群，key slot跟原生Redis cluster保持一致为0-16383，目前可以通过key slot区分后端为cluster集群还是代理分片。
