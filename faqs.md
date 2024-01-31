@@ -28,14 +28,14 @@ BGREWRITEAOF BGSAVE DEBUG CONFIG SAVE SHUTDOWN SLAVEOF
 
 另外，对于FLUSH命令做了限制，用户可在控制台上实例详情页面中，通过“清理数据”功能进行FLUSHALL或FLUSHDB清理数据；如需使用该命令请联系技术支持。
 
-## 分布式版Redis支持哪些协议？是否为原生协议？
+## 分布式版Redis代理支持哪些协议？是否为原生协议？
 
-分布式版Redis支持部分原生Redis协议，支持pipeline，支持异步读写。
+分布式版Redis代理适用于单机Redis使用方式的客户端，不支持集群使用方式（使用集群方式的客户端可以选择直连分布式版Redis后端分片），支持pipeline和异步读写。
 
-不支持协议如下（相比Redis 3.2）：
+目前分布式Redis代理不支持的Redis协议具体如下（相比Redis 3.2）：
 
 ```
-BLPOP BRPOP CLIENT CONFIG DBSIZE DISCARD EVAL  EVALSHA EXEC  MIGRATE MONITOR MOVE MULTI PSUBSCRIBE PUBLISH PUNSUBSCRIBE  SCRIPT  SELECT  SLAVEOF SLOWLOG SMOVE SUBSCRIBE SYNC UNSUBSCRIBE UNWATCH WATCH BRPOPLPUSH DEBUG
+CLUSTER KEYS MIGRATE MOVE OBJECT RANDOMKEY MSETNX BLPOP BRPOP BRPOPLPUSH PFMERGE GEOADD GEOPOS GEODIST GEORADIUS GEORADIUSBYMEMBER GEOHASH PSUBSCRIBE PUBLISH PUBSUB PUNSUBSCRIBE SUBSCRIBE UNSUBSCRIBE DISCARD EXEC MULTI UNWATCH WATCH EVAL EVALSHA SCRIPT AUTH ECHO SELECT BGREWRITEAOF BGSAVE CLIENT CONFIG DBSIZE DEBUG FLUSHALL FLUSHDB LASTSAVE MONITOR PSYNC SAVE SHUTDOWN SLAVEOF SLOWLOG SYNC TIME
 ```
 
 部分支持协议：
@@ -44,18 +44,14 @@ MSETNX - 不支持多Key操作
 
 SORT - 不支持BY选项和GET选项
 
-通过对分布式版Redis的性能优化改造，华北一、上海二C、洛杉矶、台北，香港A及首尔等可用区（未开通的可用区可申请开通）提供了具有高性能的分布式版Redis，经测试QPS性能达到同配置主备Redis的3倍，用户新建的分布式版Redis默认是具有高性能的版本，存量的分布式Redis实例不受影响。具有高性能的分布式版Redis目前不支持部分协议（相比Redis3.2），具体如下：
-
-```
-KEYS MIGRATE MOVE OBJECT RANDOMKEY MSETNX BLPOP BRPOP BRPOPLPUSH PFMERGE GEOADD GEOPOS GEODIST GEORADIUS GEORADIUSBYMEMBER GEOHASH PSUBSCRIBE PUBLISH PUBSUB PUNSUBSCRIBE SUBSCRIBE UNSUBSCRIBE DISCARD EXEC MULTI UNWATCH WATCH EVAL EVALSHA SCRIPT AUTH ECHO SELECT BGREWRITEAOF BGSAVE CLIENT CONFIG DBSIZE DEBUG FLUSHALL FLUSHDB LASTSAVE MONITOR PSYNC SAVE SHUTDOWN SLAVEOF SLOWLOG SYNC TIME
-```
-
-GEO命令目前暂不支持，我们后续可以支持。
-
 ## 使用分布式版Redis有什么限制？
 
 除部分协议不支持外，一个分布式版Redis实例只支持1个DB，即只能select 0，
 select其它无意义。Redis的keys命令，比较耗费性能，业务中尽可能降低keys的使用频率，或者使用其它方式替代。mget，mset，del等批量命令或pipeline方式，建议批量数量不宜超过1000，数量过多易造成请求延时或超时现象。
+
+## 分布式版Redis后端分片 cluster 命令支持与禁用
+与原生的cluster一样对于常用的redis操作都是支持的，对于cluster节点的操作，只支持部分查询操作CLUSTER NODES，CLUSTER SLOTS，CLUSTER KEYSLOT，节点的修改操作可以在控制台实现。对于跨节点的操作不支持如mget，keys等。
+![image](/images/redis1214.png)
 
 ## 云内存Redis如何确保存储服务的高可用？
 
@@ -189,10 +185,6 @@ QPS左右； 如果用户业务服务的短连接请求非常高，建议使用�
 ## Redis实例删除之后备份会被删除么？
 
 主备版Redis实例删除后，备份（包括自动备份和手工备份）会保留7天，7天之后自动回收。
-
-## 分布式版Redis后端分片 cluster 命令支持与禁用
-与原生的cluster一样对于常用的redis操作都是支持的，对于cluster节点的操作，只支持部分查询操作CLUSTER NODES，CLUSTER SLOTS，CLUSTER KEYSLOT，节点的修改操作可以在控制台实现。对于跨节点的操作不支持如mget，keys等。
-![image](/images/redis1214.png)
 
 ## 主备版Redis带宽
 主备Redis带宽理论值小于2Gb，实际带宽取决于宿主机情况，如需稳定高带宽，可以了解性能加强版主备Redis。

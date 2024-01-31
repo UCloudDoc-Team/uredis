@@ -2,7 +2,8 @@
 
 
 
-分布式版Redis采用Redis分片+Proxy架构，Redis分片基于主备版Redis资源池，轻松突破Redis自身单线程瓶颈，支持在线扩容可极大满足对于Redis大容量或高性能的业务需求。
+分布式版Redis采用Proxy代理+Redis分片架构，代理仅支持单机Redis的使用方式，cluster集群的Redis分片可以在无代理的情况下使用，但是仅支持原生集群的使用方式，需要根据客户端的类型来选择使用方式（命令限制见FAQs）。
+Redis分片基于主备版Redis资源池，轻松突破Redis自身单线程瓶颈，支持在线扩容可极大满足对于Redis大容量或高性能的业务需求。
 
 #### 1.分布式版Redis架构
 
