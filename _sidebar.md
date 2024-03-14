@@ -24,6 +24,7 @@
     * 主备版Redis
        * [实例管理](/uredis/guide/instance)
        * [备份管理](/uredis/guide/backup)
+       * [数据回档](/uredis/guide/aofrollback)
        * [监控告警](/uredis/guide/monitor)
        * [配置文件管理](/uredis/guide/config)
        * [数据迁移](/uredis/guide/migration)
