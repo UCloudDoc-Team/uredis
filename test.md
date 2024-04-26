@@ -321,6 +321,8 @@ Get QPS <br />
 
 代理：NVMe(或SSD)分布式版Redis代理
 
+分片数量：2分片, 4分片, 8分片, 16分片
+
 #### redis-benchmark
 服务器机型： 快杰O型
 
