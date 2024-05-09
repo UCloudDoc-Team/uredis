@@ -26,8 +26,16 @@ cluster集群支持无代理使用，客户端使用集群模式连接后端Redi
 cluster集群支持所有Redis原生cluster命令（除了集群管理或禁用的命令），但同时也受到原生cluster命令的限制，比如涉及到多个key slot键值的命令如mget，keys。
 cluster集群可以选择4.0、5.0、6.0版本创建。
 性能上，cluster集群命令请求直接发送到后端Redis分片，而分布式高性能udredis需要经过代理转发到后端Redis分片，所以直连cluster集群的性能会优于分布式高性能udredis。
+#### 3、分布式版Redis代理配置模式
 
-#### 3.分布式版Redis代理内部架构
+![image](/images/udredisproxy_ms.png)
+主从型代理各代理提供一个ip入口，用户可以自由配置代理入口
+
+
+![image](/images/udredisproxy_lb.png)
+负载均衡型代理模式下，集群只提供一个ip入口，业务集中发到ULB4上，由ULB4 Server进行故障下线和请求均衡
+
+#### 4.分布式版Redis代理内部架构
 
 ![image](/images/uredis003.png)
 
