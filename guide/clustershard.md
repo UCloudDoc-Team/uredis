@@ -22,3 +22,24 @@
 
 ![image](/images/udredis20211125001.png)
 ![image](/images/udredis20211125002.png)
+
+### 集群规格调整（分片数量）
+
+#### 控制台操作步骤
+分布式redis的类型如果是udredis(slot范围是：0-131071)类型，可以在控制台修改集群的规格。
+如下图所示：
+![image](/images/cluster_upgrade_1.png)
+
+点击修改集群规格之后选择要调整的目标集群分片数量和单分片容量：
+![image](/images/cluster_upgrade_2.png)
+
+点击“更改规格”可以在定时任务管理页面中看到该条任务。
+![image](/images/cluster_upgrade_3.png)
+
+任务状态变成“成功”表明任务执行完成，集群的规格已调整完成。
+![image](/images/cluster_upgrade_4.png)
+
+#### 注意事项
+1. 规格调整只有udredis类型的集群支持(slot范围是：0-131071)。
+2. 规格调整需要满足当前集群总数据使用量小于要调整的目的规格的总容量。
+3. 要有70%以上的分片的数据使用量小于4G，才允许做规格调整。
