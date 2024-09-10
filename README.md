@@ -34,6 +34,7 @@
        * [备份管理](/uredis/guide/clusterbackup)
        * [监控告警](/uredis/guide/clustermonitor)
        * [数据迁移](/uredis/guide/clustermigration) 
+    * [分布式版读写分离](/uredis/guide/rwmode)
 * 产品应用
     * [行业应用](/uredis/situation/industry)
     * 应用场景
