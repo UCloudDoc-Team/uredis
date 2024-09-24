@@ -28,12 +28,17 @@
        * [监控告警](/uredis/guide/monitor)
        * [配置文件管理](/uredis/guide/config)
        * [数据迁移](/uredis/guide/migration)
+       * [大key分析](/uredis/guide/bigkey)
+       * [热key分析](/uredis/guide/hotkey)
+       * [版本升级](/uredis/guide/upgrade)
+       * [碎片整理](/uredis/guide/defrag)
     * 分布式版Redis
        * [实例管理](/uredis/guide/clusterinstance)
        * [数据分片管理](/uredis/guide/clustershard)
        * [备份管理](/uredis/guide/clusterbackup)
        * [监控告警](/uredis/guide/clustermonitor)
        * [数据迁移](/uredis/guide/clustermigration) 
+       * [代理选型](/uredis/guide/proxyselect)  
     * [分布式版读写分离](/uredis/guide/rwmode)
 * 产品应用
     * [行业应用](/uredis/situation/industry)
