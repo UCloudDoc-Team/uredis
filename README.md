@@ -41,6 +41,7 @@
        * [代理选型](/uredis/guide/proxyselect)  
        * [代理管理](/uredis/guide/proxymanage)
        * [配置管理](/uredis/guide/udredisconfig)  
+       * [慢日志管理](/uredis/guide/slowlogmanage)
     * [分布式版读写分离](/uredis/guide/rwmode)
 * 产品应用
     * [行业应用](/uredis/situation/industry)
