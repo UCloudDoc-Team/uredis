@@ -20,6 +20,7 @@
 * 快速上手
     * [创建实例](/uredis/fast/create)
     * [访问实例](/uredis/fast/access)
+	* [SSL加密访问实例](/uredis/fast/ssl_access)
 * 操作指南
     * 主备版Redis
        * [实例管理](/uredis/guide/instance)
