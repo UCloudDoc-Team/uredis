@@ -2,6 +2,7 @@
 
 ## **概述**
 Redis 是一个高性能的键值存储数据库，为了保证数据传输的安全性，推荐在通信过程中启用 SSL/TLS 加密。本案例展示如何通过 **Python**、**Go** 和 **Java** 实现 SSL 加密连接到 Redis 服务器。
+建议使用TLSv1.2及以上版本,不同SDK的redis客户端在TLSv1.1时可能存在兼容问题
 
 ---
 
@@ -60,7 +61,7 @@ Redis 是一个高性能的键值存储数据库，为了保证数据传输的�
   import redis.clients.jedis.JedisPool;
 
   public class JedisSSLTest {
-      private static SSLSocketFactory createTrustStoreSSLSocketFactory(StringjksFile) throws Exception {
+      private static SSLSocketFactory createTrustStoreSSLSocketFactory(String jksFile) throws Exception {
           KeyStore trustStore = KeyStore.getInstance("jks");
           InputStream inputStream = null;
           try {
@@ -147,6 +148,7 @@ Redis 是一个高性能的键值存储数据库，为了保证数据传输的�
 
       tlsConfig := &tls.Config{
           RootCAs:            caCertPool,
+          MinVersion: 		  tls.VersionTLS11, // 强制使用TLS1.1及以上版本
           InsecureSkipVerify: true, // Not actually skipping, we check the cert in VerifyPeerCertificate
           VerifyPeerCertificate: func(rawCerts [][]byte, verifiedChains [][]*x509.Certificate) error {
               // Code copy/pasted and adapted from
