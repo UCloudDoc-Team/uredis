@@ -34,6 +34,7 @@
        * [热key分析](/uredis/guide/hotkey)
        * [版本升级](/uredis/guide/upgrade)
        * [碎片整理](/uredis/guide/defrag)
+       * [设置SSL加密](/uredis/guide/ssl)
     * 分布式版Redis
        * [实例管理](/uredis/guide/clusterinstance)
        * [数据分片管理](/uredis/guide/clustershard)
