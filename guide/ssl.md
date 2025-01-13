@@ -33,7 +33,7 @@ Redis SSL功能提供三个格式的证书，分别是：ca.crt、ca.jks、ca.p7
 
 ### 关闭SSL功能
 关闭SSL功能在“数据安全”的tab，关闭SSL功能需要重启，会等待几分钟，此期间实例状态为“修改SSL中”，修改完成之后实例状态变为“运行”。
-![image](/image/ssl9.png)
+![image](/images/ssl9.png)
 
 
 ### SSL连接方法参考：
