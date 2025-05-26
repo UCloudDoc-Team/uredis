@@ -33,7 +33,7 @@ cluster集群可以选择4.0、5.0、6.0版本创建。
 
 
 ![image](/images/udredisproxy_lb.png)
-负载均衡型代理模式下，集群只提供一个ip入口，业务集中发到ULB4上，由ULB4 Server进行故障下线和请求均衡
+负载均衡型代理模式下，集群只提供一个ip入口，业务集中发到ULB上，由ULB Server进行故障下线和请求均衡
 
 #### 4.分布式版Redis代理内部架构
 
