@@ -23,7 +23,7 @@
 - 负载均衡型代理必须保证至少存在两个代理节点
 - 目前只支持创建分布式集群时选择配置负载均衡型代理
 - 报文转发型ULB的性能指标参考[这里](https://docs.ucloud.cn/ulb/intro/performance)
-- 使用负载均衡型代理的集群额外收取2核费用作为ULB资源的费用，[代理计费信息](https://docs.ucloud.cn/uredis/price?id=nvme%e6%88%96ssd%e5%88%86%e5%b8%83%e5%bc%8f%e7%89%88redis%e8%b4%9f%e8%bd%bd%e5%9d%87%e8%a1%a1%e5%9e%8b%e4%bb%a3%e7%90%86%e4%bb%b7%e6%a0%bc)
+- 使用负载均衡型代理的集群额外收取2核费用作为ULB资源的费用([代理计费信息](https://docs.ucloud.cn/uredis/price?id=nvme%e6%88%96ssd%e5%88%86%e5%b8%83%e5%bc%8f%e7%89%88redis%e8%b4%9f%e8%bd%bd%e5%9d%87%e8%a1%a1%e5%9e%8b%e4%bb%a3%e7%90%86%e4%bb%b7%e6%a0%bc))
 
 
 
