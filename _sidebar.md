@@ -40,6 +40,7 @@
        * [实例管理](/uredis/guide/clusterinstance)
        * [数据分片管理](/uredis/guide/clustershard)
        * [备份管理](/uredis/guide/clusterbackup)
+       * [数据回档](/uredis/guide/clusteraofrollback)
        * [监控告警](/uredis/guide/clustermonitor)
        * [数据迁移](/uredis/guide/clustermigration)
        * [代理选型](/uredis/guide/proxyselect)

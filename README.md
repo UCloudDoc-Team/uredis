@@ -27,6 +27,7 @@
        * 备份与恢复
            * [备份管理](/uredis/guide/backup)
            * [从US3备份地址恢复至新实例](/uredis/guide/us3backup)
+       * [数据回档](/uredis/guide/aofrollback)
        * [监控告警](/uredis/guide/monitor)
        * [配置文件管理](/uredis/guide/config)
        * [数据迁移](/uredis/guide/migration)
@@ -39,6 +40,7 @@
        * [实例管理](/uredis/guide/clusterinstance)
        * [数据分片管理](/uredis/guide/clustershard)
        * [备份管理](/uredis/guide/clusterbackup)
+       * [数据回档](/uredis/guide/clusteraofrollback)
        * [监控告警](/uredis/guide/clustermonitor)
        * [数据迁移](/uredis/guide/clustermigration) 
        * [代理选型](/uredis/guide/proxyselect)  
