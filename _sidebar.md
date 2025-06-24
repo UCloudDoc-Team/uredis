@@ -27,6 +27,7 @@
        * 备份与恢复
            * [备份管理](/uredis/guide/backup)
            * [从US3备份地址恢复至新实例](/uredis/guide/us3backup)
+           * [跨地域备份](/uredis/guide/cross_region_backup)
        * [数据回档](/uredis/guide/aofrollback)
        * [监控告警](/uredis/guide/monitor)
        * [配置文件管理](/uredis/guide/config)
