@@ -37,6 +37,7 @@
        * [版本升级](/uredis/guide/upgrade)
        * [碎片整理](/uredis/guide/defrag)
        * [设置SSL加密](/uredis/guide/ssl)
+       * [外网访问](/uredis/guide/publicip)
     * 分布式版Redis
        * [实例管理](/uredis/guide/clusterinstance)
        * [数据分片管理](/uredis/guide/clustershard)
@@ -48,6 +49,7 @@
        * [代理管理](/uredis/guide/proxymanage)
        * [配置管理](/uredis/guide/udredisconfig)  
        * [慢日志管理](/uredis/guide/slowlogmanage)
+       * [外网访问](/uredis/guide/proxypublic)
     * [分布式版读写分离](/uredis/guide/rwmode)
 * 产品应用
     * [行业应用](/uredis/situation/industry)
