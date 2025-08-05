@@ -116,11 +116,15 @@ key大小为128B，value大小为100B，并发连接数为1000；
 
 volatile-lru：使用LRU算法从已设置过期时间的数据集合中淘汰数据。
 
+volatile-lfu： 使用LFU算法从已设置过期时间的数据集合中淘汰数据。
+
 volatile-ttl：从已设置过期时间的数据集合中挑选即将过期的数据淘汰。
 
 volatile-random：从已设置过期时间的数据集合中随机挑选数据淘汰。
 
 allkeys-lru：使用LRU算法从所有数据集合中淘汰数据。
+
+allkeys-lfu： 使用LFU算法从所有的数据集合中淘汰数据。
 
 allkeys-random：从数据集合中任意选择数据淘汰
 
