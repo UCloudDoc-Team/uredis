@@ -52,6 +52,10 @@
         * [慢日志管理](/uredis/guide/slowlogmanage)
         * [外网访问](/uredis/guide/proxypublic)
     * [分布式版读写分离](/uredis/guide/rwmode)
+    * [自治中心]
+        * [访问入口](/uredis/guide/udac_entry)
+        * [实例管理](/uredis/guide/udac_instance_manager)
+        * [性能趋势](/uredis/guide/udac_performance_trends)
 * 产品应用
     * [行业应用](/uredis/situation/industry)
     * 应用场景
