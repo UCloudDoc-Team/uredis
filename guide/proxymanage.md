@@ -26,29 +26,6 @@
 
 ![image](/images/proxymanage4.png)
 
-### 代理升级
-
-选择需要升级版本的代理，点击“升级版本”。（仅支持最新代理版本）
-
-![image](/images/upgrade_proxy_version_1.png)
-
-支持定时
-
-![image](/images/upgrade_proxy_version_2.png)
-
-支持批量升级
-
-![image](/images/upgrade_proxy_version_3.png)
-![image](/images/upgrade_proxy_version_4.png)
-
-预检查
-
-![image](/images/upgrade_proxy_version_6.png)
-
-定时任务可在任务中心自行取消
-
-![image](/images/upgrade_proxy_version_5.png)
-
 ### 代理监控信息
 
 选择需要查看监控的代理，点击“监控”。
