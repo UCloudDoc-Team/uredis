@@ -15,7 +15,6 @@
 * 产品架构
     * [主备版Redis架构](/uredis/architecture/uredis)
     * [分布式版Redis架构](/uredis/architecture/udredis)
-    * [Cluster版架构](/uredis/architecture/cluster)
     * [性能加强版主备Redis](/uredis/architecture/highperformanceuredis)
     * [主备版与分布式版对比](/uredis/architecture/difference)
 * 快速上手
