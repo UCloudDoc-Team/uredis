@@ -1,10 +1,13 @@
 
 
-* [概览](/uredis/README) 
+* [概览](/uredis/README)
 * 产品简介
     * [什么是云内存Redis](/uredis/product/concepts)
     * [主要概念](/uredis/product/terminology)
     * [产品优势](/uredis/product/superiority)
+    * 实例规格
+        * [主备版](/uredis/product/spec_master_replica)
+        * [分布式版](/uredis/product/spec_cluster)
     * 版本说明
         * [Redis版本](/uredis/product/version0)
         * [Redis4.0版本新功能介绍](/uredis/product/version)
@@ -20,7 +23,7 @@
 * 快速上手
     * [创建实例](/uredis/fast/create)
     * [访问实例](/uredis/fast/access)
-	* [SSL加密访问实例](/uredis/fast/ssl_access)
+    * [SSL加密访问实例](/uredis/fast/ssl_access)
 * 操作指南
     * 主备版Redis
         * [实例管理](/uredis/guide/instance)
