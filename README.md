@@ -54,6 +54,7 @@
         * [访问入口](/uredis/guide/udac_entry)
         * [实例管理](/uredis/guide/udac_instance_manager)
         * [性能趋势](/uredis/guide/udac_performance_trends)
+        * [内存分析](/uredis/guide/udac_mem_analysis)
 * 产品应用
     * [行业应用](/uredis/situation/industry)
     * 应用场景
