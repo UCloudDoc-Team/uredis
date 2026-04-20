@@ -1,54 +1,29 @@
 # 压力测试
 
-## 物理机普通机型测试
+## 快杰o2机型主备Redis产品测试
+### 测试环境
+#### redis-server
+redis版本： 6.0
+redis宿主机型：快杰o2机型
+redis大小：16GB
+redis线程数：单核
 
-测试条件
+#### redis-benchmark
+客户端机型： 快杰o2机型
+系统版本：CentOS 8.3
+机器配置：2core/8GB * 3
 
-1.开启pipeline，不同连接数.
+### 测试场景
+关闭pipeline条件下，对于不同Data size，三个客户端同时分别进行压力测试，每个客户端的连接数为100，对客户端的压测结果进行求和
 
-2.关闭pipeline，不同连接数
+### 压测命令
+redis-benchmark  -c 100 -n 10000000  -h IP -d $dataset -t get,set -q
 
-3.开启pipeline，不同Data size
-
-测试脚本模板：
-
-```
-#!/bin/bash
-for clients in {1,2,4,8,16,32,64,128,256,512,800}; do
-echo $clients
-redis-benchmark  -c $clients -n 5000000 -P 100 -h 10.10.214.139  -d 256 -t get,set -q
-done
-```
-
-测试结果：
-
-华北（北京2）可用区B
-
-1.开启pipeline，不同连接数
-
-```
-redis-benchmark  -c $连接数 -n 5000000 -P 100 -h IP  -d 256 -t get,set
-```
-
-![image](/images/test_1.png)
-
-2.关闭pipeline，不同连接数
-
-```
-redis-benchmark  -c $连接数 -n 1000000 -h IP -d 256 -t get,set -q
-```
-
-![image](/images/test_2.png)
-
-3.开启pipeline，不同Data size
-
-```
-redis-benchmark -c 64 -n 5000000 -P 100 -h IP -d $字节 -t get,set -q
-```
-
-![image](/images/test_3.png)
-
-
+### 测试结果
+| 字节 | 1字节 | 8字节 | 64字节 | 512字节 | 4096字节 |
+| -- | -- | -- | -- | -- | -- |
+| SetQps | 257569.24 | 271736.41 | 252985.35 | 220352.91 | 94824.99 |
+| GetQps | 341026.36 | 348562.87 | 282004.21 | 349093.52 | 254293.48 |
 
 ## 快杰主备redis产品测试
 ### 测试环境
@@ -309,6 +284,54 @@ Set QPS <br />
 Get QPS <br />
 ![image](images/highperformance_get_qps_diff_valuesize.png)
 
+
+## 物理机普通机型测试
+
+测试条件
+
+1.开启pipeline，不同连接数.
+
+2.关闭pipeline，不同连接数
+
+3.开启pipeline，不同Data size
+
+测试脚本模板：
+
+```
+#!/bin/bash
+for clients in {1,2,4,8,16,32,64,128,256,512,800}; do
+echo $clients
+redis-benchmark  -c $clients -n 5000000 -P 100 -h 10.10.214.139  -d 256 -t get,set -q
+done
+```
+
+测试结果：
+
+华北（北京2）可用区B
+
+1.开启pipeline，不同连接数
+
+```
+redis-benchmark  -c $连接数 -n 5000000 -P 100 -h IP  -d 256 -t get,set
+```
+
+![image](/images/test_1.png)
+
+2.关闭pipeline，不同连接数
+
+```
+redis-benchmark  -c $连接数 -n 1000000 -h IP -d 256 -t get,set -q
+```
+
+![image](/images/test_2.png)
+
+3.开启pipeline，不同Data size
+
+```
+redis-benchmark -c 64 -n 5000000 -P 100 -h IP -d $字节 -t get,set -q
+```
+
+![image](/images/test_3.png)
 
 ## 代理性能测试
 
