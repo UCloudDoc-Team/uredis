@@ -56,6 +56,7 @@
         * [性能趋势](/uredis/guide/udac_performance_trends)
         * [内存分析](/uredis/guide/udac_mem_analysis)
         * [大热Key分析](/uredis/guide/udac_bighot_key_analysis)
+        * [慢请求分析](/uredis/guide/udac_slowlog_analysis)
 * 产品应用
     * [行业应用](/uredis/situation/industry)
     * 应用场景
