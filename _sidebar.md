@@ -58,6 +58,7 @@
     * 自治中心
         * [访问入口](/uredis/guide/udac_entry)
         * [实例管理](/uredis/guide/udac_instance_manager)
+        * [会话管理](/uredis/guide/udac_session_management)
         * [性能趋势](/uredis/guide/udac_performance_trends)
         * [内存分析](/uredis/guide/udac_mem_analysis)
         * [大热Key分析](/uredis/guide/udac_bighot_key_analysis)
